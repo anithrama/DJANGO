@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'css/login.css'  %}">
+    {% endblock %}
+    <title>Document</title>
+</head>
+<body>
+    {% block body_block %}
+    <!-- {% csrf_token %} -->
+    
+    <h1>LOGIN</h1>
+    <form action="" method="post">
+      {% csrf_token %}
+    <div class="login_form">
+      <input type="text" id="username" placeholder="Username" name="username" >
+      <input type="password" id="password" placeholder="Password" name="pass1">
+      <button type="submit">Login</button>
+    </div>
+    </form>
+    <p>Forgot your Password?</p>
+    
+   
+    {% endblock %}
+
+    
+</body>
+</html>
