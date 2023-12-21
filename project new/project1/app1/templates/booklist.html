@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr> 
+            <th> cover</th>
+            <th> title</th>
+            <th> Author</th>
+            <th> PDF</th>
+        </tr>
+        {% for i in t %}
+        <tr> 
+            <td> <img src="{{i.cover.url}}" alt="" width="150" height="150"></td>
+            <td>{{ i.title }}</td>
+            <td>{{ i.author }}</td>
+
+            <td><a href="{{i.pdf.url}}" > Download</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>
